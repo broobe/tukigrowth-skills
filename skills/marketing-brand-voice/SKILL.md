@@ -1,6 +1,14 @@
 ---
 name: marketing-brand-voice
-description: Analyzes, builds, or validates a brand voice. Use when the user wants to document their brand voice from existing content, define it from scratch, or check whether a specific piece of copy is on-brand. Triggers on: "analyze my brand voice", "build our voice guidelines", "does this sound like us", "create a brand voice guide", "is this copy on-brand", "define our tone of voice", `/marketing-brand-voice <url>`, or any request involving how a brand communicates, sounds, or presents itself in writing. Always invoke before writing brand guidelines, tone documents, or evaluating copy consistency — even for small requests like "does this headline fit our brand."
+version: 1.0.0
+description: >
+  Analyzes, builds, or validates a brand voice from existing content or from
+  scratch. Triggers when the user asks "analyze my brand voice", "build our
+  voice guidelines", "does this sound like us", "create a brand voice guide",
+  "is this copy on-brand", "define our tone of voice",
+  `/marketing-brand-voice <url>`, or any request involving how a brand
+  communicates, sounds, or presents itself in writing. Always invoke before
+  writing brand guidelines, tone documents, or evaluating copy consistency.
 ---
 
 # marketing-brand-voice: Analyze, Build, or Validate Brand Voice

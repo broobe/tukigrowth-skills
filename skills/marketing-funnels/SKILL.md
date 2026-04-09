@@ -1,6 +1,12 @@
 ---
 name: funnel-strategy
-description: select, compare, and apply marketing, sales, product, and lifecycle funnel frameworks including tofu mofu bofu, extended lifecycle funnels, aarrr, flywheel, ecommerce funnels, b2b pipeline funnels, and hybrid models. use when the user asks which funnel to use, how funnels differ, how to structure growth, how to map acquisition, conversion, retention, and revenue, or what factors beyond business type should influence funnel choice.
+version: 1.0.0
+description: >
+  Select, compare, and apply marketing funnel frameworks — TOFU/MOFU/BOFU,
+  AARRR, flywheel, e-commerce, B2B pipeline, and hybrid models. Triggers when
+  the user asks "which funnel should I use", "how do funnels differ", "how to
+  structure growth", "map acquisition and retention", or any request involving
+  funnel selection, comparison, or stage mapping.
 ---
 
 # Funnel Strategy

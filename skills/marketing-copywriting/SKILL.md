@@ -1,6 +1,14 @@
 ---
 name: marketing-copywriting
-description: Validates existing copy or generates new copy from scratch for any marketing context — headlines, landing pages, ads, emails, CTAs, product descriptions, and more. Use when the user wants to check if their copy works, improve it, or create it from zero. Triggers on: "review my copy", "does this headline work", "write me a landing page", "improve this CTA", "validate this ad", "generate copy for X", or any request involving marketing text quality or creation. Always invoke this skill before writing or evaluating any marketing copy, even for small requests like "make this sound better."
+version: 1.0.0
+description: >
+  Validates existing copy or generates new copy from scratch for any marketing
+  context — headlines, landing pages, ads, emails, CTAs, product descriptions,
+  and more. Triggers when the user asks "review my copy", "does this headline
+  work", "write me a landing page", "improve this CTA", "validate this ad",
+  "generate copy for X", or any request involving marketing text quality or
+  creation. Always invoke before writing or evaluating marketing copy, even
+  for small requests like "make this sound better."
 ---
 
 # marketing-copywriting: Validate or Generate Marketing Copy

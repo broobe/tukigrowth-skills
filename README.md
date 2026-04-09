@@ -8,7 +8,7 @@ Skills are `SKILL.md` files that Claude Code loads automatically when the conver
 
 ## Available skills
 
-### `tukigrowth-api`
+### `tukigrowth-api` — v1.0.0
 
 Complete reference for the TukiGrowth REST API v1.
 
@@ -23,7 +23,7 @@ Covers:
 
 ---
 
-### `funnel-strategy`
+### `funnel-strategy` — v1.0.0
 
 Opinionated guidance for selecting and applying marketing funnel frameworks.
 
@@ -40,7 +40,7 @@ Responds in Spanish by default.
 
 ---
 
-### `digital-marketing-strategy-tactics`
+### `digital-marketing-strategy-tactics` — v1.0.0
 
 Explains the difference between strategy, hypothesis, initiative, and tactic in digital marketing.
 
@@ -54,6 +54,78 @@ Covers:
 
 ---
 
+### `marketing-copywriting` — v1.0.0
+
+Validates existing copy or generates new copy from scratch for any marketing context — headlines, landing pages, ads, emails, CTAs, product descriptions, and more.
+
+Triggers when the user wants to check if their copy works, improve it, or create it from zero.
+
+Covers:
+- Two modes: VALIDATE (score and rewrite) and GENERATE (from scratch)
+- Copy brief with ICP, awareness stage, brand voice, objections
+- 6-dimension scoring (Clarity, Persuasion, Specificity, Emotion, Action, Alignment)
+- Headline generation using PAS, Before-After-Bridge, Specific Outcome, Fear Reversal, Identity-Based frameworks
+- CTA generation with first-person voice and risk reduction
+- Cross-skill integration with `marketing-brand-voice` and `marketing-competitors-analysis`
+
+---
+
+### `marketing-brand-voice` — v1.0.0
+
+Analyzes, builds, or validates a brand voice from existing content or from scratch.
+
+Triggers when the user wants to document their brand voice, define it from scratch, or check if specific copy is on-brand.
+
+Covers:
+- Three modes: ANALYZE (extract from URLs), BUILD (interview-based), VALIDATE (check copy against guide)
+- ICP-anchored voice definition
+- 4-dimension scoring (Formal/Casual, Serious/Playful, Technical/Simple, Reserved/Bold)
+- Personality archetype identification
+- Vocabulary fingerprint and tone-by-context mapping
+- Generates a `BRAND-VOICE.md` deliverable
+- Cross-skill integration with `marketing-copywriting` and `marketing-competitors-analysis`
+
+---
+
+### `marketing-competitors-analysis` — v1.0.0
+
+Identifies competitors and produces actionable competitive intelligence at three depth levels.
+
+Triggers when the user wants to understand the competitive landscape, find differentiation opportunities, or benchmark against competitors.
+
+Covers:
+- Three levels: QUICK (3 competitors, in-chat), STANDARD (5–7, report), DEEP (full intelligence)
+- Competitor identification across direct, indirect, and aspirational tiers
+- Messaging and positioning analysis
+- Pricing and feature comparison
+- Content and SEO gap analysis
+- Review mining and switching narratives (DEEP)
+- Differentiation strategy with positioning recommendations
+- Generates `COMPETITOR-REPORT.md` (STANDARD/DEEP)
+- Cross-skill integration with `marketing-copywriting` and `marketing-brand-voice`
+
+---
+
+## Skill dependencies
+
+```
+marketing-competitors-analysis
+  ├── outputs COMPETITOR-REPORT.md → used by marketing-copywriting
+  └── outputs COMPETITOR-REPORT.md → used by marketing-brand-voice
+
+marketing-brand-voice
+  ├── outputs BRAND-VOICE.md → used by marketing-copywriting
+  └── reads COMPETITOR-REPORT.md → from marketing-competitors-analysis
+
+marketing-copywriting
+  ├── reads BRAND-VOICE.md → from marketing-brand-voice
+  └── reads COMPETITOR-REPORT.md → from marketing-competitors-analysis
+```
+
+Standalone (no dependencies): `tukigrowth-api`, `funnel-strategy`, `digital-marketing-strategy-tactics`
+
+---
+
 ## Repository structure
 
 ```
@@ -63,6 +135,12 @@ skills/
   marketing-funnels/
     SKILL.md
   marketing-strategies/
+    SKILL.md
+  marketing-copywriting/
+    SKILL.md
+  marketing-brand-voice/
+    SKILL.md
+  marketing-competitors-analysis/
     SKILL.md
 ```
 

@@ -1,16 +1,14 @@
 ---
 name: marketing-competitors-analysis
+version: 1.0.0
 description: >
-  Identifies competitors, analyzes their marketing strategies, and produces
-  actionable competitive intelligence at three depth levels. Use when the user
-  wants to understand the competitive landscape, find differentiation
-  opportunities, benchmark against competitors, steal proven tactics, or
-  prepare a go-to-market strategy. Triggers on: "analyze my competitors",
-  "who are my competitors", "competitive analysis", "how do I differentiate",
-  "what are competitors doing", "benchmark against market", "find positioning
-  gaps", `/marketing-competitors-analysis <url>`, or any request involving competitive
-  research, market positioning, or strategic differentiation — even casual
-  ones like "what's everyone else doing in this space."
+  Identifies competitors and produces actionable competitive intelligence at
+  three depth levels — QUICK, STANDARD, and DEEP. Triggers when the user asks
+  "analyze my competitors", "who are my competitors", "competitive analysis",
+  "how do I differentiate", "what are competitors doing",
+  "benchmark against market", "find positioning gaps",
+  `/marketing-competitors-analysis <url>`, or any request involving competitive
+  research, market positioning, or strategic differentiation.
 ---
 
 # marketing-competitors-analysis

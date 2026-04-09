@@ -1,7 +1,12 @@
 ---
 name: tukigrowth-api
+version: 1.0.0
 description: >
-  Complete reference for the TukiGrowth REST API v1. Use this skill when the user asks how to consume the API, what endpoints exist, how to authenticate, what fields an endpoint accepts, how to create/list/update/delete entities, or how to integrate TukiGrowth with external systems. Also triggers when the user asks for curl examples, code to consume the API, or help understanding API errors.
+  Complete reference for the TukiGrowth REST API v1 — authentication,
+  endpoints, fields, error codes, and integration examples. Triggers when the
+  user asks "how to use the API", "what endpoints exist", "how to authenticate",
+  "show me a curl example", "what fields does this endpoint accept", or any
+  request involving TukiGrowth API consumption, integration, or troubleshooting.
 ---
 
 # TukiGrowth REST API v1

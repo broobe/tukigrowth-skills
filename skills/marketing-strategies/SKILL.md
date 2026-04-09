@@ -1,6 +1,13 @@
 ---
 name: digital-marketing-strategy-tactics
-description: Explains the difference between strategy, hypothesis, initiative, and tactic in digital marketing. Use this skill whenever the user asks about marketing planning, how to structure a digital marketing plan, the difference between strategy and tactics, what a marketing hypothesis is, how initiatives connect to tactics, or when they mention terms like "content strategy", "social media tactics", "marketing plan", "objectives vs actions", "growth hypothesis", or ask for guidance on how to organize their digital marketing efforts.
+version: 1.0.0
+description: >
+  Explains the difference between strategy, hypothesis, initiative, and tactic
+  in digital marketing planning. Triggers when the user asks "what's the
+  difference between strategy and tactics", "how to structure a marketing plan",
+  "what is a growth hypothesis", "content strategy", "social media tactics",
+  "marketing plan", or any request involving marketing planning, objective
+  setting, or organizing digital marketing efforts.
 ---
 
 # Strategy, Hypothesis, Initiative & Tactic in Digital Marketing
