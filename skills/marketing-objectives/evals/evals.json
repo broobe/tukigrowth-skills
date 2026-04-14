@@ -1,0 +1,26 @@
+{
+  "skill_name": "marketing-objectives",
+  "evals": [
+    {
+      "id": 0,
+      "name": "define-ecommerce",
+      "prompt": "Tenemos un e-commerce de ropa y el trimestre pasado facturamos $500K. Queremos llegar a $750K el próximo trimestre. Ayudame a definir los objetivos de marketing.",
+      "expected_output": "Should produce 1-3 SMART marketing objectives with KPIs, baselines, targets, and math showing how the numbers connect to the revenue goal. Should use e-commerce funnel KPIs. Should identify the funnel stage(s) to focus on.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "refine-vague-goal",
+      "prompt": "Nuestro objetivo es 'aumentar la presencia digital de la marca'. Está bien?",
+      "expected_output": "Should identify this as a vague goal, explain what's missing (metric, number, timeframe, baseline, funnel stage), ask targeted questions, and produce a refined SMART version of the objective.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "validate-too-many",
+      "prompt": "Queremos: 1) Generar 500 leads mensuales, 2) Reducir el CAC un 40%, 3) Posicionarnos como líderes en el mercado, 4) Aumentar el engagement en redes, 5) Mejorar la tasa de conversión del sitio",
+      "expected_output": "Should validate each objective with SMART check, flag that 5 objectives is too many (recommend max 3), identify which are well-formed vs poorly-formed, spot conflicts (volume + cost reduction), and suggest a prioritized rewrite.",
+      "files": []
+    }
+  ]
+}
