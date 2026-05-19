@@ -61,6 +61,107 @@ provided, and state your assumptions explicitly at the top of the output.
 
 ## Step 2: Mode Execution
 
+### Natural Writing Guardrails
+
+Before validating or generating copy, apply these rules. The goal is copy that
+sounds like a skilled human wrote it for this exact reader, not like a generic
+copywriting framework.
+
+**Default tone:** natural, specific, and direct. Do not make the copy sound
+more dramatic than the customer context supports.
+
+Avoid these AI-slop patterns unless the brief explicitly calls for a punchy,
+contrarian, or manifesto-style tone:
+
+**Negative parallelisms**
+- Weak: "The problem isn't your CRM. It's your follow-up process."
+- Weak: "It's not just a dashboard. It's a revenue command center."
+- Better: "Your team logs every lead, but follow-up still happens too late."
+- Better: "The dashboard shows which deals are stuck and who owns the next
+  step."
+
+**Rule of three abuse**
+- Weak: "A simple, powerful, scalable platform."
+- Weak: "Save time, close more deals, and grow faster."
+- Better: "A platform for sales teams that need cleaner handoffs."
+- Better: "Cut the time between demo request and first reply."
+
+**Formulaic contrast hooks**
+- Weak: "Stop chasing leads. Start closing revenue."
+- Weak: "Less admin. More selling. Better results."
+- Better: "Reps see today's follow-ups before they open their inbox."
+- Better: "Managers can spot stale opportunities without asking for another
+  pipeline update."
+
+**False ranges**
+- Weak: "From lead generation to retention, we handle everything."
+- Weak: "From strategy to execution, your growth engine is covered."
+- Better: "We handle landing pages, lifecycle emails, and paid search
+  reporting."
+- Better: "The team builds the campaign plan, writes the assets, and reports
+  on pipeline impact."
+
+**Superficial significance claims**
+- Weak: "A game-changing solution that transforms how teams sell."
+- Weak: "This redefines the customer acquisition landscape."
+- Better: "Sales managers get one view of open deals, last touch, and next
+  action."
+- Better: "The report shows CAC, payback period, and channel-level spend in
+  one place."
+
+**Vague attribution**
+- Weak: "Leading teams know that personalization is crucial."
+- Weak: "Experts agree that speed-to-lead matters."
+- Better: "If a demo request waits until tomorrow, the rep starts the
+  conversation cold."
+- Better: Name the source, metric, or customer quote. If there is no source,
+  cut the claim.
+
+**Promotional puffery**
+- Weak: "Unlock seamless growth with an innovative solution."
+- Weak: "A robust platform designed to empower modern teams."
+- Better: "Launch the email sequence, track replies, and see which accounts
+  booked a call."
+- Better: "Import a list, assign owners, and start outreach from the same
+  workspace."
+
+**Filler transitions**
+- Avoid: "Additionally", "Furthermore", "Moreover", "It's worth noting",
+  "It's important to remember", "In today's fast-paced world"
+- Better: start with the next concrete point.
+
+Prefer these moves:
+- Name the reader's actual situation instead of dramatizing the pain
+- Use concrete nouns, numbers, constraints, and tradeoffs when available
+- Keep the same word for the same concept; do not vary synonyms just to sound
+  polished
+- Write sentences someone could say out loud without sounding like an ad
+- Let specifics create persuasion. Do not add importance claims unless the
+  evidence is in the brief
+
+**Quick self-check before final output:**
+- Red-flag word clusters: Are there multiple vague words in one paragraph,
+  such as "seamless", "robust", "innovative", "powerful", "transform",
+  "unlock", or "empower"?
+- Triple patterns: Did the copy stack three adjectives, three benefits, or
+  three abstract nouns because it sounded polished?
+- Fake contrast: Did any line use "not X, but Y", "more than X", or
+  "stop X, start Y" without a strong strategic reason?
+- Hollow stakes: Does the copy claim something is important, game-changing, or
+  transformative without showing the concrete customer impact?
+- Generic pain: Could the pain apply to almost any company, team, or buyer?
+- Missing proof: Is there a claim that needs a number, source, customer quote,
+  use case, or product detail?
+- Filler openings: Does any paragraph start with filler like "Additionally",
+  "Furthermore", "In today's market", or "It's important to"?
+- Term drift: Are marketing/sales terms used consistently, or did synonym
+  swaps create fog around the offer?
+- Human read: Would a strong marketer or sales lead actually say this out
+  loud, or does it sound like an AI prompt result?
+
+If any answer is yes, revise before responding. Cut filler, replace generic
+claims with specifics, or simplify the sentence.
+
 ### MODE A — VALIDATE
 
 User provides copy. Evaluate it against the brief (or stated assumptions).
@@ -82,7 +183,7 @@ Total: X/60 → convert to 0–100 (× 1.67)
 
 Flag if any of these are missing or weak:
 - Who this is for (specific ICP, not "businesses")
-- What painful problem it solves (in the customer's language)
+- What specific problem it solves (in the customer's language)
 - What the unique mechanism or differentiator is
 - What measurable outcome the customer gets
 - What proof supports the claims
@@ -93,6 +194,10 @@ Call out copy that's misaligned with the stated stage. Common mismatches:
 - Unaware audience → product-first copy → needs problem framing first
 - Most Aware audience → heavy education → too much friction before the offer
 - Solution Aware audience → generic value prop → fails to differentiate
+
+Also flag copy that sounds over-engineered or AI-generated: forced contrast
+hooks, abstract transformation claims, adjective stacks, and drama that the
+brief does not support.
 
 **2A.4 Before/After Rewrites:**
 
@@ -134,28 +239,34 @@ For single elements → generate inline with 3 strong alternatives minimum.
 
 Every piece of copy must:
 - Open at the reader's awareness level — meet them where they are
-- Lead with the customer's pain or desire, not the product's features
+- Enter through the reader's real situation, friction, or desired outcome —
+  not through a forced pain hook
 - Use the customer's own language (mirror their words, not marketing speak)
 - Speak to the specific ICP, not a broad audience
 - Reflect the brand voice (the 3 adjectives from the brief)
 - Address at least one key objection before the CTA
 - End with a single, clear, low-friction desired action
+- Treat headline frameworks as internal thinking tools, not visible templates.
+  If a framework makes the line sound formulaic, discard it.
 
 **2B.3 Headline generation:**
 
-Always produce 5 headline options using different frameworks. Label each.
+Produce 5 headline options from different angles. Do not label the frameworks
+in the final output unless the user asks for the reasoning.
 
 **PAS (Problem-Agitate-Solve):**
-> "Stop [pain in customer's words]. [Desired outcome] — with [product]."
+> "[Specific reader] can [specific outcome] without [specific friction]."
 
 **Before-After-Bridge:**
-> "From [painful current state] to [desired future state] — [how]."
+> "[Current situation in plain language]. [Product/mechanism] helps you
+> [better next state]."
 
 **Specific Outcome:**
 > "[Number] [ICP role] use [product] to [outcome] in [timeframe]."
 
 **Fear Reversal:**
-> "Never [underlying fear] again. [Product] [mechanism] so you [desired state]."
+> "[Product] helps you avoid [specific risk] before it turns into
+> [specific consequence]."
 
 **Identity-Based:**
 > "[Product] for [ICP who takes pride in the outcome]."
